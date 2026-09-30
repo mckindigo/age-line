@@ -60,8 +60,42 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
     const r = await p.evaluate(() => ({ q: __AGE.sim.sides.player.queue.length + __AGE.sim.units.length, t: Object.keys(__AGE.sim.sides.player.turrets).length }));
     ok("phone touch: card + socket picker work", r.q >= 1 && r.t === 1, JSON.stringify(r)); await p.close(); }
   // destroyed base (collapse -> rubble) before the results overlay appears
-  { const p = await open(VP.desk, "?demo&autoplay&seed=3&warp=730"); await p.waitForFunction("window.__AGE.sim.over", { timeout: 60000 }); await sleep(1900); await shot(p, "destroyed-1280x720");
+  { const p = await open(VP.desk, "?demo&autoplay&seed=3&warp=720"); await p.evaluate(() => { const s = __AGE.sim; if (!s.over) s.sides.enemy.base.hp = 0; }); await p.waitForFunction("window.__AGE.sim.over", { timeout: 60000 }); await sleep(1900); await shot(p, "destroyed-1280x720");
     const hp = await p.evaluate(() => Math.min(__AGE.sim.sides.enemy.base.hp, __AGE.sim.sides.player.base.hp)); ok("a base reached 0 HP and was captured destroyed", hp === 0); await p.close(); }
+  // tooltips: tap acts only; long-press / hover shows; everything else hides; never sticks
+  {
+    const tipVis = p => p.evaluate(() => !document.getElementById("tip").classList.contains("hidden"));
+    const trained = p => p.evaluate(() => { const sd = __AGE.sim.sides.player; return sd.queue.length + sd.stats.trained; });
+    const center = async (p, sel) => { const r = await p.evaluate(s => { const b = document.querySelector(s).getBoundingClientRect(); return [b.left + b.width / 2, b.top + b.height / 2]; }, sel); return r; };
+    // touch (phone)
+    const p = await open(VP.phone, "?demo&seed=5&warp=20"); await p.evaluate(() => { __AGE.sim.sides.player.gold = 5000; __AGE.sim.sides.player.queue.length = 0; });
+    const ts = p.touchscreen, [cx, cy] = await center(p, "#cards .card:nth-child(1)");
+    let n0 = await trained(p); await ts.touchStart(cx, cy); await sleep(90); await ts.touchEnd(); await sleep(120); const v1 = await tipVis(p); await sleep(600); const v2 = await tipVis(p);
+    ok("touch tap trains the unit and shows no tooltip", (await trained(p)) === n0 + 1 && !v1 && !v2);
+    n0 = await trained(p); await ts.touchStart(cx, cy); await sleep(700); const lp = await tipVis(p); await ts.touchEnd(); await sleep(100); const lr = await tipVis(p);
+    ok("long-press shows tooltip, release hides it, and does not train", lp && !lr && (await trained(p)) === n0, `shown ${lp} afterRelease ${lr}`);
+    await ts.touchStart(cx, cy); await sleep(3100); const safety = await tipVis(p); await ts.touchEnd();
+    ok("tooltip safety timeout (2.5 s) while holding", !safety);
+    await ts.touchStart(cx, cy); await sleep(650); await ts.touchMove(cx + 60, cy - 40); await sleep(80); const dragH = await tipVis(p); await ts.touchEnd();
+    ok("dragging off hides the tooltip", !dragH);
+    for (const sel of ["#socks .sock:nth-child(1)", "#spBtn"]) { const [x, y] = await center(p, sel); await ts.touchStart(x, y); await sleep(700); const sh = await tipVis(p); await ts.touchEnd(); await sleep(100);
+      const st = await p.evaluate(() => ({ tip: !document.getElementById("tip").classList.contains("hidden"), picker: !document.getElementById("picker").classList.contains("hidden"), armed: document.getElementById("spBtn").classList.contains("armed") }));
+      ok(`long-press ${sel}: tooltip then hidden, no action`, sh && !st.tip && !st.picker && !st.armed, JSON.stringify(st)); }
+    const targets = ["#cards .card:nth-child(1)", "#cards .card:nth-child(2)", "#cards .card:nth-child(3)", "#cards .card:nth-child(4)", "#spBtn", "#cards .card:nth-child(2)"];
+    for (let k = 0; k < 24; k++) { const [x, y] = await center(p, targets[k % targets.length]); await ts.touchStart(x, y); await sleep(20 + (k % 4) * 25); await ts.touchEnd(); await sleep(15); }
+    await sleep(120); const r1 = await tipVis(p); await sleep(700); const r2 = await tipVis(p);
+    ok("no stuck tooltip after 24 rapid taps", !r1 && !r2); await p.close();
+    // mouse (desktop)
+    const q = await open(VP.desk, "?demo&seed=5&warp=20"); await q.evaluate(() => { __AGE.sim.sides.player.gold = 5000; __AGE.sim.sides.player.queue.length = 0; });
+    const [mx, my] = await center(q, "#cards .card:nth-child(2)");
+    let m0 = await trained(q); await q.mouse.move(mx, my); await q.mouse.down(); await sleep(60); await q.mouse.up(); await sleep(900);
+    ok("mouse click trains and shows no tooltip (even while still hovering)", (await trained(q)) === m0 + 1 && !(await tipVis(q)));
+    await q.mouse.move(mx, my - 300); await sleep(100); await q.mouse.move(mx, my, { steps: 4 }); await sleep(900); const hv = await tipVis(q);
+    await q.mouse.move(mx, my - 300, { steps: 3 }); await sleep(100); const hl = await tipVis(q);
+    ok("hover shows tooltip, leaving hides it", hv && !hl, `hover ${hv} leave ${hl}`);
+    const [sx2, sy2] = await center(q, "#spBtn"); await q.mouse.move(sx2, sy2, { steps: 3 }); await sleep(900); const hs = await tipVis(q); await q.mouse.down(); await sleep(40); const hd = await tipVis(q); await q.mouse.up();
+    ok("hover on special shows tooltip; pressing hides it", hs && !hd); await q.close();
+  }
   // portrait sanity
   { const p = await open(VP.port, "?demo&autoplay&seed=5&warp=300"); await sleep(3000); await shot(p, "portrait-390x844");
     const st = await p.evaluate(() => ({ sw: document.documentElement.scrollWidth, iw: innerWidth, sh: document.documentElement.scrollHeight, ih: innerHeight })); ok("portrait no scroll", st.sw <= st.iw && st.sh <= st.ih, JSON.stringify(st)); await p.close(); }

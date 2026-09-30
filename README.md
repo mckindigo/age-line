@@ -18,6 +18,7 @@ Open `index.html` in any modern browser. The shipped game is one self-contained 
 ## Tests
 - `node test/sim-harness.js [seeds]`: balance matrix, 5 ages reached, win rates and lengths per difficulty, determinism, and rule checks (4 slots, 25% replace/sell refund, evolve/perks, specials never hit bases, pre-rolled special drops, shoot x/y). Writes `test/sim-results.json`.
 - `node test/browser-test.js`: headless Chrome (puppeteer-core). Checks autotest win/lose, hotkeys, touch flow, 48 px targets, no scroll, and no console errors. Writes `shots/v02-*.png` at 1280×720 and 844×390.
+- `node test/anim-frames.js [tag]`: renders idle / walk / wind-up / release frame strips for every unit and both teams at 3× into `shots/anim/`.
 - `node tools/balance.js 10`: per-seed balance detail. `node design/ai.test.js`: the AI's own test.
 
 ## Controls

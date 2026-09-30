@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.2.1
+- Tooltips no longer pop up or stick when you tap or click cards. They show only on a long-press (touch) or a hover (mouse), and a long-press never trains the unit.
+- Throwers now face the enemy (their knees bent backward, so they looked like they were walking away). Slingers wind up, release exactly where the rock leaves the sling, and follow through. Every ranged unit's shot now leaves from its weapon tip.
+
 ## v0.2.0: "Five Ages"
 - Five ages: Stone → Kiln → Banner → Gear → Spark. Each has 4 warriors, 3 turrets, a special, its own base and its own world.
 - Evolve with XP from kills, then pick 1 of 3 perks while the battle slows down.

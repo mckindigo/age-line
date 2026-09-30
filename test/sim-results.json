@@ -2,19 +2,19 @@
  "normal/mixed": {
   "wins": 10,
   "of": 10,
-  "avgMin": 19.8,
-  "minMin": 11.9,
-  "maxMin": 23.1,
-  "winAvgMin": 19.8,
+  "avgMin": 20.8,
+  "minMin": 11.3,
+  "maxMin": 22.3,
+  "winAvgMin": 20.8,
   "maxAge": 5,
   "rejected": 0
  },
  "normal/rush": {
   "wins": 0,
   "of": 10,
-  "avgMin": 4.3,
-  "minMin": 3.7,
-  "maxMin": 4.8,
+  "avgMin": 4.2,
+  "minMin": 3.5,
+  "maxMin": 4.6,
   "winAvgMin": null,
   "maxAge": 1,
   "rejected": 0
@@ -32,20 +32,20 @@
  "hard/mixed": {
   "wins": 3,
   "of": 10,
-  "avgMin": 20,
-  "minMin": 5.5,
-  "maxMin": 24,
-  "winAvgMin": 22.9,
+  "avgMin": 22.8,
+  "minMin": 21,
+  "maxMin": 24.2,
+  "winAvgMin": 23,
   "maxAge": 5,
   "rejected": 0
  },
  "impossible/mixed": {
-  "wins": 0,
+  "wins": 2,
   "of": 10,
-  "avgMin": 23.4,
+  "avgMin": 23.2,
   "minMin": 21.1,
-  "maxMin": 24.1,
-  "winAvgMin": null,
+  "maxMin": 24.2,
+  "winAvgMin": 24,
   "maxAge": 5,
   "rejected": 0
  }
