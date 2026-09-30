@@ -1,0 +1,530 @@
+{
+  "schemaVersion": 2,
+  "units": {
+    "stone_clubber": {
+      "id": "stone_clubber",
+      "name": "Thudder",
+      "age": "stone",
+      "role": "melee",
+      "subrole": null,
+      "formation": "front",
+      "cost": 15,
+      "hp": 55,
+      "dmg": 16,
+      "atkInterval": 1.0,
+      "range": 20,
+      "speed": 40,
+      "spawnTime": 1.0,
+      "bounty": {
+        "gold": 9,
+        "xp": 15
+      },
+      "radius": 14,
+      "height": 44,
+      "projectile": null,
+      "ability": null,
+      "blurb": "Round, stubborn, carries a club bigger than its opinions. Holds the front."
+    },
+    "stone_slinger": {
+      "id": "stone_slinger",
+      "name": "Whirler",
+      "age": "stone",
+      "role": "ranged",
+      "subrole": null,
+      "formation": "back",
+      "cost": 25,
+      "hp": 40,
+      "dmg": 10,
+      "atkInterval": 1.2,
+      "range": 140,
+      "speed": 38,
+      "spawnTime": 1.5,
+      "bounty": {
+        "gold": 15,
+        "xp": 25
+      },
+      "radius": 11,
+      "height": 68,
+      "projectile": {
+        "kind": "rock",
+        "speed": 300
+      },
+      "ability": null,
+      "blurb": "Lanky and quick-wristed. Hangs back behind Thudders and pelts rocks."
+    },
+    "stone_boulderback": {
+      "id": "stone_boulderback",
+      "name": "Boulderback",
+      "age": "stone",
+      "role": "heavy",
+      "subrole": null,
+      "formation": "front",
+      "cost": 45,
+      "hp": 210,
+      "dmg": 24,
+      "atkInterval": 1.7,
+      "range": 22,
+      "speed": 28,
+      "spawnTime": 2.5,
+      "bounty": {
+        "gold": 27,
+        "xp": 45
+      },
+      "radius": 20,
+      "height": 58,
+      "projectile": null,
+      "ability": null,
+      "blurb": "A walking landslide with a flat rock strapped to each fist. Slow, but it does not stop."
+    },
+    "stone_skitter": {
+      "id": "stone_skitter",
+      "name": "Skitterling",
+      "age": "stone",
+      "role": "specialist",
+      "subrole": "skirmisher",
+      "formation": "front",
+      "cost": 20,
+      "hp": 32,
+      "dmg": 7,
+      "atkInterval": 0.55,
+      "range": 18,
+      "speed": 78,
+      "spawnTime": 0.8,
+      "bounty": {
+        "gold": 12,
+        "xp": 20
+      },
+      "radius": 9,
+      "height": 34,
+      "projectile": null,
+      "ability": null,
+      "blurb": "Tiny, twitchy, and all elbows. Darts ahead to nip at slingers before the line arrives."
+    },
+    "kiln_clanger": {
+      "id": "kiln_clanger",
+      "name": "Clanger",
+      "age": "kiln",
+      "role": "melee",
+      "subrole": null,
+      "formation": "front",
+      "cost": 22,
+      "hp": 100,
+      "dmg": 23,
+      "atkInterval": 0.95,
+      "range": 22,
+      "speed": 40,
+      "spawnTime": 1.1,
+      "bounty": {
+        "gold": 13,
+        "xp": 26
+      },
+      "radius": 14,
+      "height": 46,
+      "projectile": null,
+      "ability": null,
+      "blurb": "Swings a fire-hardened clay maul that rings like a pot every time it lands."
+    },
+    "kiln_pelter": {
+      "id": "kiln_pelter",
+      "name": "Shardpelter",
+      "age": "kiln",
+      "role": "ranged",
+      "subrole": null,
+      "formation": "back",
+      "cost": 38,
+      "hp": 70,
+      "dmg": 15,
+      "atkInterval": 1.2,
+      "range": 150,
+      "speed": 38,
+      "spawnTime": 1.6,
+      "bounty": {
+        "gold": 23,
+        "xp": 42
+      },
+      "radius": 11,
+      "height": 70,
+      "projectile": {
+        "kind": "clayshot",
+        "speed": 320
+      },
+      "ability": null,
+      "blurb": "Lobs glowing kiln shards from a leather cup-sling. Stays back where it is warm."
+    },
+    "kiln_anvilhorn": {
+      "id": "kiln_anvilhorn",
+      "name": "Anvilhorn",
+      "age": "kiln",
+      "role": "heavy",
+      "subrole": null,
+      "formation": "front",
+      "cost": 68,
+      "hp": 380,
+      "dmg": 33,
+      "atkInterval": 1.6,
+      "range": 24,
+      "speed": 28,
+      "spawnTime": 2.6,
+      "bounty": {
+        "gold": 41,
+        "xp": 78
+      },
+      "radius": 21,
+      "height": 62,
+      "projectile": null,
+      "ability": null,
+      "blurb": "Wears a baked-clay helm with an anvil for a brow. Headbutts first, thinks never."
+    },
+    "kiln_hearth": {
+      "id": "kiln_hearth",
+      "name": "Hearthkeeper",
+      "age": "kiln",
+      "role": "specialist",
+      "subrole": "support",
+      "formation": "back",
+      "cost": 32,
+      "hp": 130,
+      "dmg": 9,
+      "atkInterval": 1.0,
+      "range": 110,
+      "speed": 36,
+      "spawnTime": 1.4,
+      "bounty": {
+        "gold": 19,
+        "xp": 36
+      },
+      "radius": 11,
+      "height": 56,
+      "projectile": {
+        "kind": "ember",
+        "speed": 260
+      },
+      "ability": {
+        "type": "healAura",
+        "radius": 90,
+        "hps": 3.0,
+        "affects": "allies"
+      },
+      "blurb": "Carries a coal pot on a pole. Allies nearby warm up and knit their scrapes."
+    },
+    "banner_hedgeman": {
+      "id": "banner_hedgeman",
+      "name": "Brambleguard",
+      "age": "banner",
+      "role": "melee",
+      "subrole": null,
+      "formation": "front",
+      "cost": 34,
+      "hp": 180,
+      "dmg": 32,
+      "atkInterval": 0.9,
+      "range": 24,
+      "speed": 42,
+      "spawnTime": 1.2,
+      "bounty": {
+        "gold": 20,
+        "xp": 44
+      },
+      "radius": 15,
+      "height": 50,
+      "projectile": null,
+      "ability": null,
+      "blurb": "Hides behind a thorn-wrapped round shield and pokes with a hooked spear."
+    },
+    "banner_quill": {
+      "id": "banner_quill",
+      "name": "Quillwright",
+      "age": "banner",
+      "role": "ranged",
+      "subrole": null,
+      "formation": "back",
+      "cost": 56,
+      "hp": 125,
+      "dmg": 21,
+      "atkInterval": 1.15,
+      "range": 165,
+      "speed": 38,
+      "spawnTime": 1.7,
+      "bounty": {
+        "gold": 34,
+        "xp": 70
+      },
+      "radius": 11,
+      "height": 70,
+      "projectile": {
+        "kind": "bolt",
+        "speed": 380
+      },
+      "ability": null,
+      "blurb": "Cranks a squat wooden bolt-bow. Every bolt is fletched in the tribe's colors."
+    },
+    "banner_wallwalker": {
+      "id": "banner_wallwalker",
+      "name": "Wallwalker",
+      "age": "banner",
+      "role": "heavy",
+      "subrole": null,
+      "formation": "front",
+      "cost": 100,
+      "hp": 690,
+      "dmg": 46,
+      "atkInterval": 1.5,
+      "range": 26,
+      "speed": 26,
+      "spawnTime": 2.8,
+      "bounty": {
+        "gold": 60,
+        "xp": 130
+      },
+      "radius": 23,
+      "height": 70,
+      "projectile": null,
+      "ability": null,
+      "blurb": "A stack of shields on legs, with one very tired person somewhere inside."
+    },
+    "banner_runner": {
+      "id": "banner_runner",
+      "name": "Pennant Runner",
+      "age": "banner",
+      "role": "specialist",
+      "subrole": "skirmisher",
+      "formation": "front",
+      "cost": 45,
+      "hp": 100,
+      "dmg": 18,
+      "atkInterval": 0.6,
+      "range": 22,
+      "speed": 82,
+      "spawnTime": 1.0,
+      "bounty": {
+        "gold": 27,
+        "xp": 58
+      },
+      "radius": 10,
+      "height": 54,
+      "projectile": null,
+      "ability": {
+        "type": "hasteAura",
+        "radius": 100,
+        "speedMult": 1.2,
+        "affects": "allies"
+      },
+      "blurb": "Sprints ahead waving a long pennant. Everyone near the flag walks a little faster."
+    },
+    "gear_cogbiter": {
+      "id": "gear_cogbiter",
+      "name": "Cogbiter",
+      "age": "gear",
+      "role": "melee",
+      "subrole": null,
+      "formation": "front",
+      "cost": 51,
+      "hp": 320,
+      "dmg": 45,
+      "atkInterval": 0.85,
+      "range": 24,
+      "speed": 44,
+      "spawnTime": 1.3,
+      "bounty": {
+        "gold": 31,
+        "xp": 74
+      },
+      "radius": 15,
+      "height": 52,
+      "projectile": null,
+      "ability": null,
+      "blurb": "Has a spinning toothed wheel where a hand should be. Very enthusiastic about it."
+    },
+    "gear_pipesnap": {
+      "id": "gear_pipesnap",
+      "name": "Pipesnap",
+      "age": "gear",
+      "role": "ranged",
+      "subrole": null,
+      "formation": "back",
+      "cost": 84,
+      "hp": 225,
+      "dmg": 30,
+      "atkInterval": 1.1,
+      "range": 175,
+      "speed": 38,
+      "spawnTime": 1.8,
+      "bounty": {
+        "gold": 50,
+        "xp": 118
+      },
+      "radius": 11,
+      "height": 72,
+      "projectile": {
+        "kind": "pellet",
+        "speed": 460
+      },
+      "ability": null,
+      "blurb": "Snaps a brass air-pipe rifle and fires hot rivets from a comfortable distance."
+    },
+    "gear_boilerhulk": {
+      "id": "gear_boilerhulk",
+      "name": "Boilerhulk",
+      "age": "gear",
+      "role": "heavy",
+      "subrole": null,
+      "formation": "front",
+      "cost": 150,
+      "hp": 1250,
+      "dmg": 66,
+      "atkInterval": 1.45,
+      "range": 28,
+      "speed": 24,
+      "spawnTime": 3.0,
+      "bounty": {
+        "gold": 90,
+        "xp": 210
+      },
+      "radius": 25,
+      "height": 78,
+      "projectile": null,
+      "ability": null,
+      "blurb": "A walking boiler that vents steam through its knees. Punches with pressure valves."
+    },
+    "gear_wisp": {
+      "id": "gear_wisp",
+      "name": "Tinker Wisp",
+      "age": "gear",
+      "role": "specialist",
+      "subrole": "support",
+      "formation": "back",
+      "cost": 68,
+      "hp": 370,
+      "dmg": 20,
+      "atkInterval": 0.9,
+      "range": 120,
+      "speed": 40,
+      "spawnTime": 1.6,
+      "bounty": {
+        "gold": 41,
+        "xp": 98
+      },
+      "radius": 10,
+      "height": 60,
+      "projectile": {
+        "kind": "pellet",
+        "speed": 420
+      },
+      "ability": {
+        "type": "shieldPulse",
+        "radius": 80,
+        "shield": 70,
+        "every": 6.0,
+        "affects": "allies"
+      },
+      "blurb": "A clockwork kite with a tinkerer dangling below. Clips brass plates onto friends."
+    },
+    "spark_arcblade": {
+      "id": "spark_arcblade",
+      "name": "Arcfencer",
+      "age": "spark",
+      "role": "melee",
+      "subrole": null,
+      "formation": "front",
+      "cost": 76,
+      "hp": 580,
+      "dmg": 64,
+      "atkInterval": 0.8,
+      "range": 26,
+      "speed": 46,
+      "spawnTime": 1.4,
+      "bounty": {
+        "gold": 46,
+        "xp": 120
+      },
+      "radius": 15,
+      "height": 54,
+      "projectile": null,
+      "ability": null,
+      "blurb": "Duels with a humming wire-whip that crackles blue whenever it connects."
+    },
+    "spark_lancer": {
+      "id": "spark_lancer",
+      "name": "Glintcaster",
+      "age": "spark",
+      "role": "ranged",
+      "subrole": null,
+      "formation": "back",
+      "cost": 126,
+      "hp": 405,
+      "dmg": 43,
+      "atkInterval": 1.05,
+      "range": 185,
+      "speed": 38,
+      "spawnTime": 1.9,
+      "bounty": {
+        "gold": 76,
+        "xp": 195
+      },
+      "radius": 11,
+      "height": 74,
+      "projectile": {
+        "kind": "spark",
+        "speed": 560
+      },
+      "ability": null,
+      "blurb": "Focuses sunlight through a crystal staff and snaps it out in bright white darts."
+    },
+    "spark_cradle": {
+      "id": "spark_cradle",
+      "name": "Stormcradle",
+      "age": "spark",
+      "role": "heavy",
+      "subrole": null,
+      "formation": "front",
+      "cost": 225,
+      "hp": 2250,
+      "dmg": 95,
+      "atkInterval": 1.4,
+      "range": 30,
+      "speed": 24,
+      "spawnTime": 3.2,
+      "bounty": {
+        "gold": 135,
+        "xp": 345
+      },
+      "radius": 26,
+      "height": 84,
+      "projectile": null,
+      "ability": null,
+      "blurb": "A copper cage on stomping legs with a trapped thundercloud inside. Grumbles loudly."
+    },
+    "spark_warden": {
+      "id": "spark_warden",
+      "name": "Pulse Warden",
+      "age": "spark",
+      "role": "specialist",
+      "subrole": "support",
+      "formation": "back",
+      "cost": 102,
+      "hp": 630,
+      "dmg": 30,
+      "atkInterval": 0.85,
+      "range": 125,
+      "speed": 40,
+      "spawnTime": 1.8,
+      "bounty": {
+        "gold": 61,
+        "xp": 160
+      },
+      "radius": 11,
+      "height": 64,
+      "projectile": {
+        "kind": "spark",
+        "speed": 520
+      },
+      "ability": {
+        "type": "damageReductionAura",
+        "radius": 95,
+        "mult": 0.8,
+        "affects": "allies"
+      },
+      "blurb": "Hums a steady tone through a tuning-fork mast. Hits on nearby allies land softer."
+    }
+  }
+}

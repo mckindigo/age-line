@@ -1,0 +1,52 @@
+{
+ "normal/mixed": {
+  "wins": 10,
+  "of": 10,
+  "avgMin": 19.8,
+  "minMin": 11.9,
+  "maxMin": 23.1,
+  "winAvgMin": 19.8,
+  "maxAge": 5,
+  "rejected": 0
+ },
+ "normal/rush": {
+  "wins": 0,
+  "of": 10,
+  "avgMin": 4.3,
+  "minMin": 3.7,
+  "maxMin": 4.8,
+  "winAvgMin": null,
+  "maxAge": 1,
+  "rejected": 0
+ },
+ "normal/idle": {
+  "wins": 0,
+  "of": 10,
+  "avgMin": 1.1,
+  "minMin": 1.1,
+  "maxMin": 1.2,
+  "winAvgMin": null,
+  "maxAge": 1,
+  "rejected": 0
+ },
+ "hard/mixed": {
+  "wins": 3,
+  "of": 10,
+  "avgMin": 20,
+  "minMin": 5.5,
+  "maxMin": 24,
+  "winAvgMin": 22.9,
+  "maxAge": 5,
+  "rejected": 0
+ },
+ "impossible/mixed": {
+  "wins": 0,
+  "of": 10,
+  "avgMin": 23.4,
+  "minMin": 21.1,
+  "maxMin": 24.1,
+  "winAvgMin": null,
+  "maxAge": 5,
+  "rejected": 0
+ }
+}

@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 2,
+  "specials": {
+    "stone_rockslide": {
+      "id": "stone_rockslide",
+      "name": "Rockslide",
+      "age": "stone",
+      "cooldown": 50,
+      "target": "enemyUnits",
+      "hitsBases": false,
+      "kind": "laneRain",
+      "params": {
+        "projectiles": 10,
+        "damagePerHit": 35,
+        "radius": 40,
+        "duration": 2.5,
+        "zone": {
+          "fromX": 250,
+          "toX": 1050
+        }
+      },
+      "blurb": "The mesa shrugs. Boulders tumble down across the lane and flatten rival warriors."
+    },
+    "kiln_ember_burst": {
+      "id": "kiln_ember_burst",
+      "name": "Kiln Burst",
+      "age": "kiln",
+      "cooldown": 52,
+      "target": "enemyUnits",
+      "hitsBases": false,
+      "kind": "laneRain",
+      "params": {
+        "projectiles": 12,
+        "damagePerHit": 55,
+        "radius": 45,
+        "duration": 2.5,
+        "zone": {
+          "fromX": 250,
+          "toX": 1050
+        },
+        "burn": {
+          "dps": 6,
+          "duration": 3
+        }
+      },
+      "blurb": "Every kiln door swings open at once. Clouds of glowing shards drift down on the rivals."
+    },
+    "banner_charge_horn": {
+      "id": "banner_charge_horn",
+      "name": "Muster Horn",
+      "age": "banner",
+      "cooldown": 55,
+      "target": "alliedUnits+enemyUnits",
+      "hitsBases": false,
+      "kind": "buffAndShove",
+      "params": {
+        "allyDmgMult": 1.3,
+        "allySpeedMult": 1.25,
+        "duration": 8,
+        "enemyKnockback": 60,
+        "enemyDamage": 40
+      },
+      "blurb": "One long blast rolls down the lane. Your side surges forward, and the rival front line is shoved back."
+    },
+    "gear_steam_vent": {
+      "id": "gear_steam_vent",
+      "name": "Steam Vent",
+      "age": "gear",
+      "cooldown": 55,
+      "target": "enemyUnits",
+      "hitsBases": false,
+      "kind": "groundZone",
+      "params": {
+        "width": 260,
+        "placeAt": "enemyFront",
+        "dps": 55,
+        "slowMult": 0.6,
+        "duration": 6
+      },
+      "blurb": "Pipes burst under the rivals' feet. A scalding cloud slows and cooks anything standing in it."
+    },
+    "spark_static_surge": {
+      "id": "spark_static_surge",
+      "name": "Static Surge",
+      "age": "spark",
+      "cooldown": 60,
+      "target": "enemyUnits",
+      "hitsBases": false,
+      "kind": "chainStrike",
+      "params": {
+        "strikes": 3,
+        "initialDamage": 320,
+        "jumps": 6,
+        "jumpRange": 110,
+        "jumpFalloff": 0.8,
+        "stunDuration": 1.0,
+        "interval": 0.6
+      },
+      "blurb": "The sky crackles. Bolts snap from rival to rival and leave them twitching."
+    }
+  }
+}

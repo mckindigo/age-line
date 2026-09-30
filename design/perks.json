@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 2,
+  "perks": [
+    {
+      "id": "perk_thick_hides",
+      "name": "Thick Hides",
+      "desc": "Melee units get +15% max HP.",
+      "effect": {
+        "target": "role:melee",
+        "stat": "hp",
+        "mult": 1.15
+      },
+      "maxStacks": 3
+    },
+    {
+      "id": "perk_heavy_swing",
+      "name": "Heavy Swing",
+      "desc": "Melee units deal +12% damage.",
+      "effect": {
+        "target": "role:melee",
+        "stat": "dmg",
+        "mult": 1.12
+      },
+      "maxStacks": 3
+    },
+    {
+      "id": "perk_steady_hands",
+      "name": "Steady Hands",
+      "desc": "Ranged units attack 10% faster.",
+      "effect": {
+        "target": "role:ranged",
+        "stat": "attackInterval",
+        "mult": 0.9
+      },
+      "maxStacks": 2
+    },
+    {
+      "id": "perk_long_eye",
+      "name": "Long Eye",
+      "desc": "Ranged units get +20 range.",
+      "effect": {
+        "target": "role:ranged",
+        "stat": "range",
+        "add": 20
+      },
+      "maxStacks": 2
+    },
+    {
+      "id": "perk_bedrock",
+      "name": "Bedrock Bones",
+      "desc": "Heavy units get +18% max HP.",
+      "effect": {
+        "target": "role:heavy",
+        "stat": "hp",
+        "mult": 1.18
+      },
+      "maxStacks": 2
+    },
+    {
+      "id": "perk_cheap_bulk",
+      "name": "Bulk Discount",
+      "desc": "Heavy units cost 12% less.",
+      "effect": {
+        "target": "role:heavy",
+        "stat": "cost",
+        "mult": 0.88
+      },
+      "maxStacks": 2
+    },
+    {
+      "id": "perk_quickfeet",
+      "name": "Quick Feet",
+      "desc": "Specialists move 20% faster.",
+      "effect": {
+        "target": "role:specialist",
+        "stat": "moveSpeed",
+        "mult": 1.2
+      },
+      "maxStacks": 2
+    },
+    {
+      "id": "perk_sharp_tricks",
+      "name": "Sharp Tricks",
+      "desc": "Specialists deal +20% damage.",
+      "effect": {
+        "target": "role:specialist",
+        "stat": "dmg",
+        "mult": 1.2
+      },
+      "maxStacks": 2
+    },
+    {
+      "id": "perk_oiled_arms",
+      "name": "Oiled Arms",
+      "desc": "Turrets fire 12% faster.",
+      "effect": {
+        "target": "turrets",
+        "stat": "attackInterval",
+        "mult": 0.88
+      },
+      "maxStacks": 2
+    },
+    {
+      "id": "perk_high_perch",
+      "name": "High Perch",
+      "desc": "Turrets get +30 range.",
+      "effect": {
+        "target": "turrets",
+        "stat": "range",
+        "add": 30
+      },
+      "maxStacks": 2
+    },
+    {
+      "id": "perk_tithe",
+      "name": "Tribute Tithe",
+      "desc": "Gold income +12%.",
+      "effect": {
+        "target": "economy",
+        "stat": "goldPerSec",
+        "mult": 1.12
+      },
+      "maxStacks": 2
+    },
+    {
+      "id": "perk_scavengers",
+      "name": "Scavengers",
+      "desc": "Kills pay +20% gold.",
+      "effect": {
+        "target": "economy",
+        "stat": "bounty",
+        "mult": 1.2
+      },
+      "maxStacks": 2
+    },
+    {
+      "id": "perk_old_songs",
+      "name": "Old Songs",
+      "desc": "Special ability cooldown -15%.",
+      "effect": {
+        "target": "special",
+        "stat": "cooldown",
+        "mult": 0.85
+      },
+      "maxStacks": 2
+    },
+    {
+      "id": "perk_loud_sky",
+      "name": "Loud Sky",
+      "desc": "Special ability deals +20% damage.",
+      "effect": {
+        "target": "special",
+        "stat": "dmg",
+        "mult": 1.2
+      },
+      "maxStacks": 2
+    },
+    {
+      "id": "perk_deep_roots",
+      "name": "Deep Roots",
+      "desc": "Your base gets +12% max HP.",
+      "effect": {
+        "target": "base",
+        "stat": "maxHp",
+        "mult": 1.12
+      },
+      "maxStacks": 2
+    },
+    {
+      "id": "perk_mortar_mix",
+      "name": "Mortar Mix",
+      "desc": "Your base gets +150 max HP.",
+      "effect": {
+        "target": "base",
+        "stat": "maxHp",
+        "add": 150
+      },
+      "maxStacks": 2
+    }
+  ]
+}

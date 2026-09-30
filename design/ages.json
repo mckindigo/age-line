@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 2,
+  "ages": [
+    {
+      "id": "stone",
+      "name": "Stone Age",
+      "order": 0,
+      "xpToNext": 1000,
+      "nextAgeNote": "Fire the clay. Enter the Kiln Age.",
+      "baseMaxHp": 1000,
+      "goldPerSec": 2.0,
+      "palette": "pal_ember_dusk",
+      "units": [
+        "stone_clubber",
+        "stone_slinger",
+        "stone_boulderback",
+        "stone_skitter"
+      ],
+      "turrets": [
+        "stone_rock_sling",
+        "stone_pitch_pot",
+        "stone_bone_rack"
+      ],
+      "special": "stone_rockslide"
+    },
+    {
+      "id": "kiln",
+      "name": "Kiln Age",
+      "order": 1,
+      "xpToNext": 3500,
+      "nextAgeNote": "Raise the colors. Enter the Banner Age.",
+      "baseMaxHp": 1400,
+      "goldPerSec": 3.0,
+      "palette": "pal_kiln_glow",
+      "units": [
+        "kiln_clanger",
+        "kiln_pelter",
+        "kiln_anvilhorn",
+        "kiln_hearth"
+      ],
+      "turrets": [
+        "kiln_dart_frame",
+        "kiln_mortar",
+        "kiln_brick_oven"
+      ],
+      "special": "kiln_ember_burst"
+    },
+    {
+      "id": "banner",
+      "name": "Banner Age",
+      "order": 2,
+      "xpToNext": 9000,
+      "nextAgeNote": "Wind the springs. Enter the Gear Age.",
+      "baseMaxHp": 1900,
+      "goldPerSec": 4.5,
+      "palette": "pal_banner_field",
+      "units": [
+        "banner_hedgeman",
+        "banner_quill",
+        "banner_wallwalker",
+        "banner_runner"
+      ],
+      "turrets": [
+        "banner_spire_bow",
+        "banner_cauldron",
+        "banner_bell"
+      ],
+      "special": "banner_charge_horn"
+    },
+    {
+      "id": "gear",
+      "name": "Gear Age",
+      "order": 3,
+      "xpToNext": 20000,
+      "nextAgeNote": "Catch the lightning. Enter the Spark Age.",
+      "baseMaxHp": 2500,
+      "goldPerSec": 6.75,
+      "palette": "pal_gear_smog",
+      "units": [
+        "gear_cogbiter",
+        "gear_pipesnap",
+        "gear_boilerhulk",
+        "gear_wisp"
+      ],
+      "turrets": [
+        "gear_rivet_gun",
+        "gear_steam_mortar",
+        "gear_magnet_coil"
+      ],
+      "special": "gear_steam_vent"
+    },
+    {
+      "id": "spark",
+      "name": "Spark Age",
+      "order": 4,
+      "xpToNext": null,
+      "nextAgeNote": null,
+      "baseMaxHp": 3200,
+      "goldPerSec": 10.0,
+      "palette": "pal_spark_night",
+      "units": [
+        "spark_arcblade",
+        "spark_lancer",
+        "spark_cradle",
+        "spark_warden"
+      ],
+      "turrets": [
+        "spark_arc_pylon",
+        "spark_prism",
+        "spark_gravity_drum"
+      ],
+      "special": "spark_static_surge"
+    }
+  ]
+}
